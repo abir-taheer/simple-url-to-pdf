@@ -10,7 +10,7 @@
   "success_url": "https://github.com/abir-taheer/simple-url-to-pdf",
   "buildpacks": [
     {
-      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+      "url": "https://github.com/jontewks/puppeteer"
     },
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
