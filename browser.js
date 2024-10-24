@@ -4,11 +4,9 @@ let browser = null;
 
 const getBrowser = async () => {
   if (!browser) {
-    browser = await puppeteer.launch([
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-gpu",
-    ]);
+    browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+    });
   }
 
   return browser;
