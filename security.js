@@ -10,9 +10,9 @@ const isUrlAllowed = (url) => {
 };
 
 const securityMiddleware = (req, res, next) => {
-  req.url = req.query.url || req.body.url;
+  req.verifiedUrl = req.query.url || req.body.url;
 
-  if (!URL.canParse(req.url)) {
+  if (!URL.canParse(req.verifiedUrl)) {
     res.status(400).json({
       status: "error",
       message: "Invalid URL",

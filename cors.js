@@ -5,7 +5,9 @@ const whitelist = ALLOWED_CORS_STR.split(", ");
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
+    if (!origin) {
+      callback(null, true);
+    } else if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));

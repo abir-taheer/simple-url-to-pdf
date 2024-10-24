@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use("/api/render", securityMiddleware);
 
 app.post("/api/render", async (req, res) => {
-  const url = req.url;
+  const url = req.verifiedUrl;
 
   const goto = req.body.goto || {};
   const pdf = req.body.pdf || {};
@@ -23,7 +23,7 @@ app.post("/api/render", async (req, res) => {
 });
 
 app.get("/api/render", async (req, res) => {
-  const url = req.url;
+  const url = req.verifiedUrl;
 
   const goto = req.query.goto || {};
   const pdf = req.query.pdf || {};
