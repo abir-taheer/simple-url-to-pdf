@@ -1,5 +1,5 @@
 const ALLOWED_PREFIX_STR = process.env.ALLOWED_PREFIXES || "";
-const allowed_prefixes = process.env.ALLOWED_PREFIXES.split(", ");
+const allowed_prefixes = ALLOWED_PREFIX_STR.split(", ");
 
 const isUrlAllowed = (url) => {
   if (ALLOWED_PREFIX_STR === "") {
