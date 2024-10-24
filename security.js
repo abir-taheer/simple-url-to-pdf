@@ -17,7 +17,7 @@ const securityMiddleware = (req, res, next) => {
       status: "error",
       message: "Invalid URL",
     });
-  } else if (!isUrlAllowed(req.url)) {
+  } else if (!isUrlAllowed(req.verifiedUrl)) {
     res.status(403).json({
       status: "error",
       message: "This URL is not allowed",
