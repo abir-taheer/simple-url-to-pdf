@@ -2,11 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const downloadPageAsPDF = require("./browser");
 const securityMiddleware = require("./security");
+const cors = require("./cors");
 
 const app = express();
 
+app.use(cors);
 app.use(bodyParser.json());
-
 app.use("/api/render", securityMiddleware);
 
 app.post("/api/render", async (req, res) => {
