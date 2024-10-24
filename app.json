@@ -1,0 +1,22 @@
+{
+  "name": "simple-url-to-pdf",
+  "description": "API: URL => PDF",
+  "keywords": [
+    "pdf",
+    "html"
+  ],
+  "repository": "https://github.com/abir-taheer/simple-url-to-pdf",
+  "env": {},
+  "success_url": "https://github.com/abir-taheer/simple-url-to-pdf",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    },
+    {
+      "url": "https://github.com/debitoor/heroku-buildpack-converter-fonts"
+    }
+  ]
+}
