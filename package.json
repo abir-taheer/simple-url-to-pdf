@@ -15,7 +15,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache"
   }
 }
