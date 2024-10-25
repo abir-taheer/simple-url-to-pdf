@@ -15,7 +15,7 @@ RUN apt update \
      && wget --quiet https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O /usr/sbin/wait-for-it.sh \
      && chmod +x /usr/sbin/wait-for-it.sh
 
-RUN npm install --production && npm cache clean --force && npm run build --if-present
+RUN npm install --production && npm run build --if-present
 
 ENV NODE_ENV production
 ENV PORT 80
