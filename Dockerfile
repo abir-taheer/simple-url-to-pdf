@@ -1,9 +1,8 @@
 FROM node:22.6
 
-RUN mkdir -p /puppeteer
-WORKDIR /puppeteer
-
-COPY ./ /puppeteer
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY ./ /usr/src/app
 
 RUN apt update \
      && apt install -y wget gnupg ca-certificates \
