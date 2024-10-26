@@ -5,11 +5,6 @@
 
 A service that generates PDFs from web pages using Puppeteer.
 
-## Base URL
-```
-https://pdf-api.mass.build
-```
-
 ## Endpoints
 
 ### Generate PDF
